@@ -98,7 +98,7 @@
   }
 
    nav
-   {
+   {-
    height:79px;
    }
    
@@ -123,7 +123,7 @@
                               
                                  $.post('/', $('#fo1').serialize()).done(data => {
                                     if(data == "No"){
-                                        document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwnd Found</b></h3>        </div></div> ';
+                                        document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwn Found</b></h3>        </div></div> ';
                                     }else{
                                           var count = data.length;
                                           document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Ohh No!!! <b>Your are Pwnd</b></h3><h6>Your Mail is Pwnd <b> '+count+' </b>times</h6>        </div></div> ';
