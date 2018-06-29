@@ -52,13 +52,13 @@ app.post('/', (req, res) => {
 });
 
 
-app.get('*', (req, res) => {
-res.status(404)
-res.json({
-    error: 1,
-    msg: 'Invalid'
-    });
-});
+// app.get('*', (req, res) => {
+// res.status(404)
+// res.json({
+//     error: 1,
+//     msg: 'Invalid'
+//     });
+// });
 
 
 app.listen(PORT, err => {
