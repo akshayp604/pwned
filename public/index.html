@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="cssMat/materialize.min.css" media="screen,projection"/>
+ <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <meta charset="utf-8" name="viewport" content="width=device-width, intial-scale=1.0" >
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Comfortaa">
+<style type="text/css">
+    #fb
+    {
+        background-color: #3B5998;
+    }
+    #googleplus
+    {
+        background-color: #DD4B39
+    }
+    #insta
+    {
+        background-color: #C93083;
+    }
+    #twitter
+    {
+        background-color: #55ACEE;
+    }
+
+     #fonts
+    {
+    font-family: 'Comfortaa', serif;
+    font-size:60px;
+    text-align: center;
+    }
+    
+	#colo
+    {
+    background-color: #EE6E73;
+    }
+	
+	@-webkit-keyframes typing { from { width: 0; } }
+    @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+    h2
+    {
+    text-align: center;
+    border-radius: 25px;
+    padding: 20px; 
+    width: 700px;
+    height: 100px;  
+    border-right: .em solid green;
+	width: 10.5em; 
+	width: 19ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 3s steps(21, end),
+	blink-caret .5s step-end infinite alternate;	
+	}
+	
+.page 
+{
+  color: #378CAC;
+  font-size: 21px;
+  font-weight: 100;
+  text-align: center;
+  font-family: 'Comfortaa';
+  
+}
+.abc{
+  height:60px;
+  width: 700px;
+  background-color: #EE6E73;
+}
+
+  body 
+  {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main 
+  {
+    flex: 1 0 auto;
+  }
+
+   nav
+   {
+   height:79px;
+   }
+   
+   li:hover
+   {
+   font-weight:bold;
+   }
+   
+   li
+   {
+       margin-right: 10px;
+   }
+</style>
+
+
+<script>
+    $(document).ready(function(){
+        
+                            $('#fo1').on('submit', e => {
+                                e.preventDefault();
+                                document.getElementById("maincon").innerHTML = "";
+                              
+                                 $.post('/', $('#fo1').serialize()).done(data => {
+                                    if(data == "No"){
+                                        document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwnd Found</b></h3>        </div></div> ';
+                                    }else{
+                                          var count = data.length;
+                                          document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Ohh No!!! <b>Your are Pwnd</b></h3><h6>Your Mail is Pwnd <b> '+count+' </b>times</h6>        </div></div> ';
+                                    }
+                                    
+                                    
+                                 });
+                               
+                                 
+                            });
+                });
+</script>
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+
+    <!-- Navbar brand -->
+   
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pwnage.html">What Is Pwning?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+            </li>
+			            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li></ul>
+		 <a class="navbar-brand" href="#" style=color:rgb(252,255,72)><font size="6"><b>Pwn, Is That You?</b></font></a>
+        <!-- Links -->
+    </div>
+    <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+   <br><br>
+
+
+<center> <h2 id="fonts"><b>Check Your Email</b></h2></center>
+<p class="page"> <b>Check If You Have An Account That Has Been Compromised In a Data Breach</b></p>
+
+<br>
+<center>
+<nav class="abc">
+  <div class="nav-wrapper" >
+    <form id="fo1">
+      <div class="input-field">
+        <input id="search" type="search" name="username" required placeholder="Enter your Email">
+        <label class="label-icon" ><i class="material-icons" >search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </div>
+</nav>
+
+</center>
+
+<br>
+<div class="container" id="maincon">
+    <!-- <div class="row center-align">
+        <div class="col s7 m7">
+            <h3>Ohh No!!! <b>Your are Pound</b></h3>
+            <h6>Your Mail is Pound <b> 84 </b>times</h6>
+        </div>
+    </div> -->
+</div>
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Follow Us On</h5>
+                <a id="twitter" class="btn-floating btn-lg btn-tw"><i class="fa fa-twitter"></i></a>           
+                <a id="fb" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>     
+                <a id="googleplus" class="btn-floating btn-lg btn-gplus"><i class="fa fa-google-plus"></i></a>
+                <a id="insta" class="btn-floating btn-lg btn-ins"><i class="fa fa-instagram"></i></a>
+              </div>
+              </div>
+            </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright Text
+            </div>
+          </div>
+        </footer>
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="jsMat/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</body>
+
+</html>
