@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Pwned is that you?</title>
     <!-- Font Awesome -->
@@ -13,46 +14,24 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet  ">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-<link rel="stylesheet" type="text/css" href="cssMat/materialize.min.css" media="screen,projection"/>
- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
-    <meta charset="utf-8" name="viewport" content="width=device-width, intial-scale=1.0" >
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
-<style type="text/css">
-    #fb
-    {
-        background-color: #3B5998;
-    }
-    #googleplus
-    {
-        background-color: #DD4B39
-    }
-    #insta
-    {
-        background-color: #C93083;
-    }
-    #twitter
-    {
-        background-color: #55ACEE;
-    }
-
-     #fonts
-    {
-    font-family: 'Comfortaa', serif;
-    font-size:60px;
-    text-align: center;
-    }
-    
-  #colo
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        #fo1
+        {
+            
+            width: 600px;
+            size: 70px;
+            font-size: 40px;
+        }
+        #colo
     {
     background-color: #EE6E73;
     }
-  
-  @-webkit-keyframes typing { from { width: 0; } }
+    
+    @-webkit-keyframes typing { from { width: 0; } }
     @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
     h2
     {
@@ -61,15 +40,15 @@
     padding: 20px; 
     width: 700px;
     height: 100px;  
-    border-right: .em solid green;
-  width: 10.5em; 
-  width: 19ch;
-  white-space: nowrap;
-  overflow: hidden;
-  -webkit-animation: typing 3s steps(21, end),
-  blink-caret .5s step-end infinite alternate;  
-  }
-  
+    border-right: solid green;
+    width: 10.5em; 
+    width: 19ch;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 3s steps(21, end),
+    blink-caret .5s step-end infinite alternate;    
+    }
+    
 .page 
 {
   color: #378CAC;
@@ -84,6 +63,12 @@
   width: 700px;
   background-color: #EE6E73;
 }
+.fonts
+nav
+   {
+   height:65px;
+   font-size: 100px;
+   }
 
   body 
   {
@@ -92,63 +77,44 @@
     flex-direction: column;
   }
 
-  main 
-  {
-    flex: 1 0 auto;
-  }
+  
+            </style>
 
-   nav
-   {
-   height:79px;
-   }
-   
-   li:hover
-   {
-   font-weight:bold;
-   }
-   
-   li
-   {
-       margin-right: 10px;
-   }
-</style>
-
-
-<script>
+            <script>
     $(document).ready(function(){
         
                             $('#fo1').on('submit', e => {
                                 e.preventDefault();
                                 document.getElementById("maincon").innerHTML = "";
-                              
+
                                  $.post('/', $('#fo1').serialize()).done(data => {
                                     if(data == "No"){
-                                        document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwn Found</b></h3>        </div></div> ';
+                                        document.getElementById("maincon").innerHTML = '<center><div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwned Found</b></h3>        </div></div></center> ';
                                     }else{
                                           var count = data.length;
-                                          document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Ohh No!!! <b>Your are Pwnd</b></h3><h6>Your Mail is Pwnd <b> '+count+' </b>times</h6>        </div></div> ';
+                                          document.getElementById("maincon").innerHTML = '<center><div id="fo1" class="row center-align"><div class="col s7 m7">         <h3 id="fo1">Ohh No!!! <b>Your are Pwned</b></h3><h6 id="fo1">Your Mail is Pwned <b> '+count+' </b>times</h6>        </div></div></center> ';
                                     }
                                     
                                     
                                  });
                                
+                               
                                  
                             });
                 });
 </script>
-
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark cyan darken-3">
+    
 
-    <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark elegant-color">
 
     <!-- Navbar brand -->
-   
+
 
     <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+    <button class="navbar-toggler"  data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -169,39 +135,31 @@
             <li class="nav-item">
                 <a class="nav-link" href="about.html">About Us</a>
             </li>
-                  <li class="nav-item">
+             <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
-            </li></ul>
-     <a class="navbar-brand" href="#" style=color:rgb(252,255,72)><font size="6"><b>Pwn, Is That You?</b></font></a>
+            </li>
+            <!-- Dropdown -->
+         
+
+        </ul>
         <!-- Links -->
+
     </div>
     <!-- Collapsible content -->
 
 </nav>
 <!--/.Navbar-->
-
-   <br><br>
-
-
-<center> <h2 id="fonts"><b>Check Your Email</b></h2></center>
+<br><br>
+<center> <h2 id="fonts"><b>Check Your Email...</b></h2>
 <p class="page"> <b>Check If You Have An Account That Has Been Compromised In a Data Breach</b></p>
 
 <br>
-<center>
-<nav class="abc">
-  <div class="nav-wrapper" >
-    <form id="fo1">
-      <div class="input-field">
-        <input id="search" type="search" name="username" required placeholder="Enter your Email">
-        <label class="label-icon" ><i class="material-icons" >search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
-  </div>
-</nav>
-
+<!-- Search form -->
+<form id="fo1" class="form-inline md-form form-sm active-pink active-pink-2" >
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Enter you Email" name="username" aria-label="Search">
+</form>
 </center>
-
 <br>
 <div class="container" id="maincon">
     <!-- <div class="row center-align">
@@ -212,6 +170,7 @@
     </div> -->
 </div>
 
+
 <br><br>
 <br><br>
 <br><br>
@@ -219,27 +178,73 @@
 <br><br>
 <br><br>
 <br><br>
-<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Follow Us On</h5>
-                <a id="twitter" class="btn-floating btn-lg btn-tw"><i class="fa fa-twitter"></i></a>           
-                <a id="fb" class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>     
-                <a id="googleplus" class="btn-floating btn-lg btn-gplus"><i class="fa fa-google-plus"></i></a>
-                <a id="insta" class="btn-floating btn-lg btn-ins"><i class="fa fa-instagram"></i></a>
-              </div>
-              </div>
-            </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2018 Copyright Text
-            </div>
+
+  <!-- Footer --><!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-12 py-5">
+           <center> <h3>Follow us on</h3></center>
+          <div class="mb-5 flex-center">
+
+<!--Facebook-->
+<a  class="btn-floating btn-lg btn-fb"><i class="fa fa-facebook"></i></a>
+<!--Twitter-->
+<a  class="btn-floating btn-lg btn-tw"><i class="fa fa-twitter"></i></a>
+<!--Google +-->
+<a  class="btn-floating btn-lg btn-gplus"><i class="fa fa-google-plus"></i></a>
+<!--Linkedin-->
+<a  class="btn-floating btn-lg btn-li"><i class="fa fa-linkedin"></i></a>
+<!--Instagram-->
+<a  class="btn-floating btn-lg btn-ins"><i class="fa fa-instagram"></i></a>
+<!--Pinterest-->
+<a  class="btn-floating btn-lg btn-pin"><i class="fa fa-pinterest"></i></a>
+<!--Youtube-->
+<a  class="btn-floating btn-lg btn-yt"><i class="fa fa-youtube"></i></a>
+<!--Dribbble-->
+<a  class="btn-floating btn-lg btn-dribbble"><i class="fa fa-dribbble"></i></a>
+<!--Vkontakte-->
+<a  class="btn-floating btn-lg btn-vk"><i class="fa fa-vk"></i></a>
+<!--Stack Overflow-->
+<a  class="btn-floating btn-lg btn-so"><i class="fa fa-stack-overflow"></i></a>
+<!--Slack-->
+<a  class="btn-floating btn-lg btn-slack"><i class="fa fa-slack"></i></a>
+<!--Github-->
+<a  class="btn-floating btn-lg btn-git"><i class="fa fa-github"></i></a>
+<!--Comments-->
+<a  class="btn-floating btn-lg btn-comm"><i class="fa fa-comments"></i></a>
+<!--Email-->
+<a  class="btn-floating btn-lg btn-email"><i class="fa fa-envelope"></i></a>
+<!--Reddit-->
+<a  class="btn-floating btn-lg btn-reddit"><i class="fa fa-reddit-alien"></i></a>
           </div>
-        </footer>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://PhonesDiary.com/">PhonesDiary.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
@@ -247,13 +252,6 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-
-
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="jsMat/materialize.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 </body>
 
 </html>
