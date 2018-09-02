@@ -1,6 +1,6 @@
-/*!
+/*
  * Material Design for Bootstrap 4
- * Version: MDB FREE 4.5.5
+ * Version: MDB FREE 4.5.9
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -1454,6 +1454,9 @@ button.bg-light:focus {
   width: 64px;
   height: 64px; }
 
+.mml-1 {
+  margin-left: -0.25rem !important; }
+
 @font-face {
   font-family: "Roboto";
   src: local(Roboto Thin), url("../font/roboto/Roboto-Thin.eot");
@@ -1693,6 +1696,9 @@ a.text-light:hover, a.text-light:focus {
   .view .mask {
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -1734,40 +1740,39 @@ a.text-light:hover, a.text-light:focus {
   transform: scale(1.1); }
 
 .pattern-1 {
-  background: url("../img//overlays/01.png"); }
+  background: url("../img/overlays/01.png"); }
 
 .pattern-2 {
-  background: url("../img//overlays/02.png"); }
+  background: url("../img/overlays/02.png"); }
 
 .pattern-3 {
-  background: url("../img//overlays/03.png"); }
+  background: url("../img/overlays/03.png"); }
 
 .pattern-4 {
-  background: url("../img//overlays/04.png"); }
+  background: url("../img/overlays/04.png"); }
 
 .pattern-5 {
-  background: url("../img//overlays/05.png"); }
+  background: url("../img/overlays/05.png"); }
 
 .pattern-6 {
-  background: url("../img//overlays/06.png"); }
+  background: url("../img/overlays/06.png"); }
 
 .pattern-7 {
-  background: url("../img//overlays/07.png"); }
+  background: url("../img/overlays/07.png"); }
 
 .pattern-8 {
-  background: url("../img//overlays/08.png"); }
+  background: url("../img/overlays/08.png"); }
 
 .pattern-9 {
-  background: url("../img//overlays/09.png"); }
+  background: url("../img/overlays/09.png"); }
 
 /*!
- * Waves v0.7.5
+ * Waves v0.7.6
  * http://fian.my.id/Waves
  *
- * Copyright 2014-2016 Alfiana E. Sibuea and other contributors
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
  * Released under the MIT license
- * https://github.com/fians/Waves/blob/master/LICENSE
- */
+ * https://github.com/fians/Waves/blob/master/LICENSE */
 .waves-effect {
   position: relative;
   cursor: pointer;
@@ -1776,8 +1781,7 @@ a.text-light:hover, a.text-light:focus {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  z-index: 1; }
+  -webkit-tap-highlight-color: transparent; }
   .waves-effect .waves-ripple {
     position: absolute;
     -webkit-border-radius: 50%;
@@ -1794,6 +1798,8 @@ a.text-light:hover, a.text-light:focus {
     -webkit-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
     -webkit-transition-property: opacity, -webkit-transform;
     transition-property: opacity, -webkit-transform;
     -o-transition-property: transform, opacity;
@@ -1821,6 +1827,7 @@ a.text-light:hover, a.text-light:focus {
 .waves-button,
 .waves-circle {
   -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); }
 
@@ -1834,7 +1841,7 @@ a.text-light:hover, a.text-light:focus {
   border: none;
   outline: none;
   color: inherit;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   font-size: 1em;
   line-height: 1em;
   text-align: center;
@@ -1853,8 +1860,7 @@ a.text-light:hover, a.text-light:focus {
 .waves-input-wrapper {
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;
-  vertical-align: middle;
-  display: inline-block; }
+  vertical-align: bottom; }
   .waves-input-wrapper.waves-button {
     padding: 0; }
   .waves-input-wrapper .waves-button-input {
@@ -6215,6 +6221,12 @@ a.waves-effect, a.waves-light {
       font-size: 0.9375rem;
       font-weight: 300;
       color: #000 !important; }
+    @media (max-width: 600px) {
+      .navbar .dropdown-menu form {
+        width: 17rem; } }
+    @media (min-width: 600px) {
+      .navbar .dropdown-menu form {
+        width: 22rem; } }
   .navbar.navbar-light .navbar-nav .nav-item .nav-link.disbled {
     color: rgba(0, 0, 0, 0.3); }
     .navbar.navbar-light .navbar-nav .nav-item .nav-link.disbled:hover {
@@ -6246,9 +6258,6 @@ a.waves-effect, a.waves-light {
   .navbar.navbar-light form .md-form .form-control {
     color: #000; }
     .navbar.navbar-light form .md-form .form-control::-webkit-input-placeholder {
-      color: #000;
-      font-weight: 300; }
-    .navbar.navbar-light form .md-form .form-control::-moz-placeholder {
       color: #000;
       font-weight: 300; }
     .navbar.navbar-light form .md-form .form-control:-ms-input-placeholder {
@@ -6291,9 +6300,6 @@ a.waves-effect, a.waves-light {
   .navbar.navbar-dark form .md-form .form-control {
     color: #fff; }
     .navbar.navbar-dark form .md-form .form-control::-webkit-input-placeholder {
-      color: #fff;
-      font-weight: 300; }
-    .navbar.navbar-dark form .md-form .form-control::-moz-placeholder {
       color: #fff;
       font-weight: 300; }
     .navbar.navbar-dark form .md-form .form-control:-ms-input-placeholder {
@@ -6510,24 +6516,23 @@ body.scrollable {
       margin-top: 1.5rem; }
       .modal-dialog.cascading-modal .modal-header .social-buttons a {
         font-size: 1rem; }
-  .modal-dialog.cascading-modal .modal-c-tabs .nav-tabs {
+  .modal-dialog.cascading-modal .modal-c-tabs .md-tabs {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    margin: -1.5rem 1rem 0 1rem; }
-  .modal-dialog.cascading-modal .modal-c-tabs .tab-content {
-    padding: 1.7rem 0 0 0; }
-  .modal-dialog.cascading-modal .nav-tabs {
+    margin: -1.5rem 1rem 0 1rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; }
-    .modal-dialog.cascading-modal .nav-tabs li {
+    .modal-dialog.cascading-modal .modal-c-tabs .md-tabs li {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1; }
-      .modal-dialog.cascading-modal .nav-tabs li a {
+      .modal-dialog.cascading-modal .modal-c-tabs .md-tabs li a {
         text-align: center; }
+  .modal-dialog.cascading-modal .modal-c-tabs .tab-content {
+    padding: 1.7rem 0 0 0; }
   .modal-dialog.cascading-modal .modal-body,
   .modal-dialog.cascading-modal .modal-footer {
     padding-left: 2rem;
@@ -6679,7 +6684,8 @@ body.scrollable {
       display: flex;
       margin: 0;
       width: 400px;
-      height: 100%;
+      height: auto;
+      min-height: 100%;
       top: 0;
       right: 0; }
       .modal .modal-full-height.modal-top, .modal .modal-full-height.modal-bottom {
@@ -6690,6 +6696,7 @@ body.scrollable {
       .modal .modal-full-height.modal-top {
         bottom: auto; }
       .modal .modal-full-height.modal-bottom {
+        min-height: 0;
         top: auto; }
       .modal .modal-full-height .modal-content {
         width: 100%; }
@@ -6712,25 +6719,16 @@ body.scrollable {
       margin: 0;
       width: 400px; } }
 
-.nav-tabs {
-  -webkit-border-radius: 0.25rem;
-  border-radius: 0.25rem; }
-  .nav-tabs .nav-item .nav-link {
-    -webkit-border-radius: 0.25rem;
-    border-radius: 0.25rem;
-    background-color: inherit;
-    color: #fff; }
-
 .carousel .carousel-control-prev-icon,
 .carousel .carousel-control-next-icon {
   width: 20px;
   height: 20px; }
 
 .carousel .carousel-control-prev-icon {
-  background-image: url(../img//svg/arrow_left.svg); }
+  background-image: url(../img/svg/arrow_left.svg); }
 
 .carousel .carousel-control-next-icon {
-  background-image: url(../img//svg/arrow_right.svg); }
+  background-image: url(../img/svg/arrow_right.svg); }
 
 .carousel .carousel-indicators li {
   width: 0.625rem;
@@ -6957,6 +6955,156 @@ body.scrollable {
       content: attr(data-error);
       color: #f44336;
       opacity: 1; }
+    .md-form input[type=text].form-control.valid + label:after,
+    .md-form input[type=text].form-control:focus.valid + label:after,
+    .md-form input[type=password].form-control.valid + label:after,
+    .md-form input[type=password].form-control:focus.valid + label:after,
+    .md-form input[type=email].form-control.valid + label:after,
+    .md-form input[type=email].form-control:focus.valid + label:after,
+    .md-form input[type=url].form-control.valid + label:after,
+    .md-form input[type=url].form-control:focus.valid + label:after,
+    .md-form input[type=time].form-control.valid + label:after,
+    .md-form input[type=time].form-control:focus.valid + label:after,
+    .md-form input[type=date].form-control.valid + label:after,
+    .md-form input[type=date].form-control:focus.valid + label:after,
+    .md-form input[type=datetime-local].form-control.valid + label:after,
+    .md-form input[type=datetime-local].form-control:focus.valid + label:after,
+    .md-form input[type=tel].form-control.valid + label:after,
+    .md-form input[type=tel].form-control:focus.valid + label:after,
+    .md-form input[type=number].form-control.valid + label:after,
+    .md-form input[type=number].form-control:focus.valid + label:after,
+    .md-form input[type=search-md].form-control.valid + label:after,
+    .md-form input[type=search-md].form-control:focus.valid + label:after,
+    .md-form input[type=search].form-control.valid + label:after,
+    .md-form input[type=search].form-control:focus.valid + label:after,
+    .md-form textarea.md-textarea.form-control.valid + label:after,
+    .md-form textarea.md-textarea.form-control:focus.valid + label:after {
+      top: 3.56rem; }
+    .md-form input[type=text].form-control.invalid + label:after,
+    .md-form input[type=text].form-control:focus.invalid + label:after,
+    .md-form input[type=password].form-control.invalid + label:after,
+    .md-form input[type=password].form-control:focus.invalid + label:after,
+    .md-form input[type=email].form-control.invalid + label:after,
+    .md-form input[type=email].form-control:focus.invalid + label:after,
+    .md-form input[type=url].form-control.invalid + label:after,
+    .md-form input[type=url].form-control:focus.invalid + label:after,
+    .md-form input[type=time].form-control.invalid + label:after,
+    .md-form input[type=time].form-control:focus.invalid + label:after,
+    .md-form input[type=date].form-control.invalid + label:after,
+    .md-form input[type=date].form-control:focus.invalid + label:after,
+    .md-form input[type=datetime-local].form-control.invalid + label:after,
+    .md-form input[type=datetime-local].form-control:focus.invalid + label:after,
+    .md-form input[type=tel].form-control.invalid + label:after,
+    .md-form input[type=tel].form-control:focus.invalid + label:after,
+    .md-form input[type=number].form-control.invalid + label:after,
+    .md-form input[type=number].form-control:focus.invalid + label:after,
+    .md-form input[type=search-md].form-control.invalid + label:after,
+    .md-form input[type=search-md].form-control:focus.invalid + label:after,
+    .md-form input[type=search].form-control.invalid + label:after,
+    .md-form input[type=search].form-control:focus.invalid + label:after,
+    .md-form textarea.md-textarea.form-control.invalid + label:after,
+    .md-form textarea.md-textarea.form-control:focus.invalid + label:after {
+      top: 3.44rem; }
+    .md-form input[type=text].form-control-lg.valid + label:after,
+    .md-form input[type=text].form-control-lg:focus.valid + label:after,
+    .md-form input[type=password].form-control-lg.valid + label:after,
+    .md-form input[type=password].form-control-lg:focus.valid + label:after,
+    .md-form input[type=email].form-control-lg.valid + label:after,
+    .md-form input[type=email].form-control-lg:focus.valid + label:after,
+    .md-form input[type=url].form-control-lg.valid + label:after,
+    .md-form input[type=url].form-control-lg:focus.valid + label:after,
+    .md-form input[type=time].form-control-lg.valid + label:after,
+    .md-form input[type=time].form-control-lg:focus.valid + label:after,
+    .md-form input[type=date].form-control-lg.valid + label:after,
+    .md-form input[type=date].form-control-lg:focus.valid + label:after,
+    .md-form input[type=datetime-local].form-control-lg.valid + label:after,
+    .md-form input[type=datetime-local].form-control-lg:focus.valid + label:after,
+    .md-form input[type=tel].form-control-lg.valid + label:after,
+    .md-form input[type=tel].form-control-lg:focus.valid + label:after,
+    .md-form input[type=number].form-control-lg.valid + label:after,
+    .md-form input[type=number].form-control-lg:focus.valid + label:after,
+    .md-form input[type=search-md].form-control-lg.valid + label:after,
+    .md-form input[type=search-md].form-control-lg:focus.valid + label:after,
+    .md-form input[type=search].form-control-lg.valid + label:after,
+    .md-form input[type=search].form-control-lg:focus.valid + label:after,
+    .md-form textarea.md-textarea.form-control-lg.valid + label:after,
+    .md-form textarea.md-textarea.form-control-lg:focus.valid + label:after {
+      top: 4.1rem; }
+    .md-form input[type=text].form-control-lg.invalid + label:after,
+    .md-form input[type=text].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=password].form-control-lg.invalid + label:after,
+    .md-form input[type=password].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=email].form-control-lg.invalid + label:after,
+    .md-form input[type=email].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=url].form-control-lg.invalid + label:after,
+    .md-form input[type=url].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=time].form-control-lg.invalid + label:after,
+    .md-form input[type=time].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=date].form-control-lg.invalid + label:after,
+    .md-form input[type=date].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=datetime-local].form-control-lg.invalid + label:after,
+    .md-form input[type=datetime-local].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=tel].form-control-lg.invalid + label:after,
+    .md-form input[type=tel].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=number].form-control-lg.invalid + label:after,
+    .md-form input[type=number].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=search-md].form-control-lg.invalid + label:after,
+    .md-form input[type=search-md].form-control-lg:focus.invalid + label:after,
+    .md-form input[type=search].form-control-lg.invalid + label:after,
+    .md-form input[type=search].form-control-lg:focus.invalid + label:after,
+    .md-form textarea.md-textarea.form-control-lg.invalid + label:after,
+    .md-form textarea.md-textarea.form-control-lg:focus.invalid + label:after {
+      top: 4rem; }
+    .md-form input[type=text].form-control-sm.valid + label:after,
+    .md-form input[type=text].form-control-sm:focus.valid + label:after,
+    .md-form input[type=password].form-control-sm.valid + label:after,
+    .md-form input[type=password].form-control-sm:focus.valid + label:after,
+    .md-form input[type=email].form-control-sm.valid + label:after,
+    .md-form input[type=email].form-control-sm:focus.valid + label:after,
+    .md-form input[type=url].form-control-sm.valid + label:after,
+    .md-form input[type=url].form-control-sm:focus.valid + label:after,
+    .md-form input[type=time].form-control-sm.valid + label:after,
+    .md-form input[type=time].form-control-sm:focus.valid + label:after,
+    .md-form input[type=date].form-control-sm.valid + label:after,
+    .md-form input[type=date].form-control-sm:focus.valid + label:after,
+    .md-form input[type=datetime-local].form-control-sm.valid + label:after,
+    .md-form input[type=datetime-local].form-control-sm:focus.valid + label:after,
+    .md-form input[type=tel].form-control-sm.valid + label:after,
+    .md-form input[type=tel].form-control-sm:focus.valid + label:after,
+    .md-form input[type=number].form-control-sm.valid + label:after,
+    .md-form input[type=number].form-control-sm:focus.valid + label:after,
+    .md-form input[type=search-md].form-control-sm.valid + label:after,
+    .md-form input[type=search-md].form-control-sm:focus.valid + label:after,
+    .md-form input[type=search].form-control-sm.valid + label:after,
+    .md-form input[type=search].form-control-sm:focus.valid + label:after,
+    .md-form textarea.md-textarea.form-control-sm.valid + label:after,
+    .md-form textarea.md-textarea.form-control-sm:focus.valid + label:after {
+      top: 3.2rem; }
+    .md-form input[type=text].form-control-sm.invalid + label:after,
+    .md-form input[type=text].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=password].form-control-sm.invalid + label:after,
+    .md-form input[type=password].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=email].form-control-sm.invalid + label:after,
+    .md-form input[type=email].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=url].form-control-sm.invalid + label:after,
+    .md-form input[type=url].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=time].form-control-sm.invalid + label:after,
+    .md-form input[type=time].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=date].form-control-sm.invalid + label:after,
+    .md-form input[type=date].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=datetime-local].form-control-sm.invalid + label:after,
+    .md-form input[type=datetime-local].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=tel].form-control-sm.invalid + label:after,
+    .md-form input[type=tel].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=number].form-control-sm.invalid + label:after,
+    .md-form input[type=number].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=search-md].form-control-sm.invalid + label:after,
+    .md-form input[type=search-md].form-control-sm:focus.invalid + label:after,
+    .md-form input[type=search].form-control-sm.invalid + label:after,
+    .md-form input[type=search].form-control-sm:focus.invalid + label:after,
+    .md-form textarea.md-textarea.form-control-sm.invalid + label:after,
+    .md-form textarea.md-textarea.form-control-sm:focus.invalid + label:after {
+      top: 3.1rem; }
   .md-form .was-validated input[type=text]:valid + label {
     color: #00c851 !important; }
   .md-form .was-validated input[type=text]:invalid + label {
@@ -6977,7 +7125,8 @@ body.scrollable {
     border-radius: 0;
     padding: 0.3rem 0 0.55rem 0;
     background-image: none;
-    background-color: transparent; }
+    background-color: transparent;
+    height: auto; }
     .md-form .form-control:focus {
       -webkit-box-shadow: none;
       box-shadow: none;
@@ -6985,6 +7134,8 @@ body.scrollable {
     .md-form .form-control:disabled, .md-form .form-control[readonly] {
       border-bottom: 1px solid #bdbdbd;
       background-color: transparent; }
+  .md-form .validate {
+    margin-bottom: 2.5rem; }
   .md-form label {
     font-size: 1rem; }
     .md-form label.active {
@@ -6992,7 +7143,8 @@ body.scrollable {
   .md-form .prefix {
     top: 0.25rem;
     font-size: 1.75rem; }
-    .md-form .prefix ~ input, .md-form .prefix ~ textarea {
+    .md-form .prefix ~ input,
+    .md-form .prefix ~ textarea {
       margin-left: 2.5rem;
       width: -webkit-calc(100% - 2.5rem);
       width: calc(100% - 2.5rem); }
@@ -7020,6 +7172,8 @@ body.scrollable {
     transition: color 0.2s; }
     .md-form .prefix.active {
       color: #4285f4; }
+  .md-form.form-lg .validate {
+    margin-bottom: 2.8rem; }
   .md-form.form-lg label {
     font-size: 1.25rem; }
     .md-form.form-lg label.active {
@@ -7027,7 +7181,8 @@ body.scrollable {
   .md-form.form-lg .prefix {
     top: 0.4rem;
     font-size: 2rem; }
-    .md-form.form-lg .prefix ~ input, .md-form.form-lg .prefix ~ textarea {
+    .md-form.form-lg .prefix ~ input,
+    .md-form.form-lg .prefix ~ textarea {
       margin-left: 3rem;
       width: -webkit-calc(100% - 3rem);
       width: calc(100% - 3rem); }
@@ -7035,6 +7190,8 @@ body.scrollable {
       margin-left: 3rem; }
     .md-form.form-lg .prefix ~ .form-text {
       margin-left: 3.1rem; }
+  .md-form.form-sm .validate {
+    margin-bottom: 2.3rem; }
   .md-form.form-sm label {
     font-size: 0.875rem; }
     .md-form.form-sm label.active {
@@ -7042,7 +7199,8 @@ body.scrollable {
   .md-form.form-sm .prefix {
     top: 0.35rem;
     font-size: 1.5rem; }
-    .md-form.form-sm .prefix ~ input, .md-form.form-sm .prefix ~ textarea {
+    .md-form.form-sm .prefix ~ input,
+    .md-form.form-sm .prefix ~ textarea {
       margin-left: 2rem;
       width: -webkit-calc(100% - 2rem);
       width: calc(100% - 2rem); }
@@ -7159,6 +7317,51 @@ table.table-sm td {
 
 .table-fixed {
   table-layout: fixed; }
+
+.bs-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+  .bs-switch input {
+    display: none; }
+    .bs-switch input:checked + .slider {
+      background-color: #2196F3; }
+      .bs-switch input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px); }
+    .bs-switch input:focus + .slider {
+      -webkit-box-shadow: 0 0 1px #2196F3;
+      box-shadow: 0 0 1px #2196F3; }
+  .bs-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+    .bs-switch .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      -o-transition: .4s;
+      transition: .4s; }
+    .bs-switch .slider.round {
+      -webkit-border-radius: 34px;
+      border-radius: 34px; }
+      .bs-switch .slider.round:before {
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
 
 .view .full-bg-img {
   height: 100%; }
