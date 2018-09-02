@@ -17,8 +17,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <style type="text/css">
-        #f1
+        #fo1
         {
             
             width: 600px;
@@ -88,10 +89,10 @@ nav
 
                                  $.post('/', $('#fo1').serialize()).done(data => {
                                     if(data == "No"){
-                                        document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwned Found</b></h3>        </div></div> ';
+                                        document.getElementById("maincon").innerHTML = '<center><div class="row center-align"><div class="col s7 m7">         <h3>Wow!! <b>No Pwned Found</b></h3>        </div></div></center> ';
                                     }else{
                                           var count = data.length;
-                                          document.getElementById("maincon").innerHTML = '<div class="row center-align"><div class="col s7 m7">         <h3>Ohh No!!! <b>Your are Pwned</b></h3><h6>Your Mail is Pwned <b> '+count+' </b>times</h6>        </div></div> ';
+                                          document.getElementById("maincon").innerHTML = '<center><div id="fo1" class="row center-align"><div class="col s7 m7">         <h3 id="fo1">Ohh No!!! <b>Your are Pwned</b></h3><h6 id="fo1">Your Mail is Pwned <b> '+count+' </b>times</h6>        </div></div></center> ';
                                     }
                                     
                                     
@@ -154,11 +155,20 @@ nav
 
 <br>
 <!-- Search form -->
-<form class="form-inline md-form form-sm active-pink active-pink-2" id="f1">
+<form id="fo1" class="form-inline md-form form-sm active-pink active-pink-2" >
     <i class="fa fa-search" aria-hidden="true"></i>
     <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Enter you Email" name="username" aria-label="Search">
 </form>
 </center>
+<br>
+<div class="container" id="maincon">
+    <!-- <div class="row center-align">
+        <div class="col s7 m7">
+            <h3>Ohh No!!! <b>Your are Pound</b></h3>
+            <h6>Your Mail is Pound <b> 84 </b>times</h6>
+        </div>
+    </div> -->
+</div>
 
 
 <br><br>
@@ -234,6 +244,7 @@ nav
 
     <!-- SCRIPTS -->
     <!-- JQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/popper.min.js"></script>
